@@ -29,37 +29,37 @@ O propósito do projeto foi criar uma vm básica (qualificada para o nível grat
 
  >#! /bin/bash
 
- apt update -> atualiza os programas
+     apt update -> atualiza os programas
 
- apt -y install apache2 -> instala apache2 (para quando colocar o IP, saber que a máquina está viva) 
+     apt -y install apache2 -> instala apache2 (para quando colocar o IP, saber que a máquina está viva) 
 
- apt -y install php -> instala o php, para o wordpress poder funcionar 
+     apt -y install php -> instala o php, para o wordpress poder funcionar 
 
- systemctl restart apache2 -> reinicia o apache 
+     systemctl restart apache2 -> reinicia o apache 
 
- cd /var/www/html -> abre a pasta /var/www/html o comando cd serve pra abrir diretórios 
+     cd /var/www/html -> abre a pasta /var/www/html o comando cd serve pra abrir diretórios 
 
- rm index.html -> remove o arquivo index.html 
+     rm index.html -> remove o arquivo index.html 
 
- cd .. -> volta duas pastas
+     cd .. -> volta duas pastas
 
- apt -y install wget -> instala wget wget http://wordpress.org/latest.tar.gz -> dá um wget no wordpress 
+     apt -y install wget -> instala wget wget http://wordpress.org/latest.tar.gz -> dá um wget no wordpress 
 
- tar -xzvf latest.tar.gz -> descompacta o arquivo zipado 
+     tar -xzvf latest.tar.gz -> descompacta o arquivo zipado 
 
- apt -y install rsync -> instala rsync, serve para sincronizar diretórios 
+     apt -y install rsync -> instala rsync, serve para sincronizar diretórios 
 
- rsync -avP wordpress/ /var/www/html -> sincroniza wordpress pra pasta /var/www/html 
+     rsync -avP wordpress/ /var/www/html -> sincroniza wordpress pra pasta /var/www/html 
 
- cd /var/www/html -> abre a /var/www/html 
+     cd /var/www/html -> abre a /var/www/html 
 
- apt install php-mysql php-cgi php-cli php-gd -y -> instala todos esses programas
+     apt install php-mysql php-cgi php-cli php-gd -y -> instala todos esses programas
 
- systemctl restart apache2 -> restarta o apache2 
+     systemctl restart apache2 -> restarta o apache2 
 
- chown -R www-data:www-data /var/www/html -> dá permissão ao var/www/html 
+     chown -R www-data:www-data /var/www/html -> dá permissão ao var/www/html 
 
- systemctl restart apache2 -> restarta o apache2
+     systemctl restart apache2 -> restarta o apache2
  
  Após o wordpress instalado na VM, só foi preciso conectar o banco de dados:
 Mysql -h endpoint do banco -u usuário do database (ex: admin) -p
