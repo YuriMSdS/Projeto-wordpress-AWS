@@ -1,15 +1,15 @@
 # Projeto-wordpress-AWS
 O propósito do projeto foi criar uma vm básica (qualificada para o nível gratuito), utilizando a nuvem AWS.
   
-  A VM (EC2) foi criada no tipo t2.micro (é uma instância de baixo custo e bom desempenho) na plataforma Ubuntu (é base de linux, fácil de trabalhar), utilizei a zona de disponibilidade us-east-1c (boa conexão) tendo 8 GiB de tamanho do tipo gb2 (o projeto é leve, então o mínimo é o suficiente).
+  A VM (EC2) foi criada no tipo t2.micro (é uma instância de baixo custo e bom desempenho) na plataforma Ubuntu (é base de linux, fácil de trabalhar), utilizei a zona de disponibilidade us-east-1c (boa conexão e compatível com o tipo da instância) tendo 8 GiB de tamanho do tipo gb2 (o projeto é leve, então o mínimo é o suficiente).
  
  O banco de dados mysql foi criado na versão 8.0.28 (porém tem a 8.0.30 como mais recente),classe db.t3.micro (banco de dados de acesso remoto), tendo 1 GB de RAM, um SSD de uso geral de 20 GiB tendo como máximo 1000 GiB (armazenamento mínimo do SSD)
  
  Antes de proseguir para o CMD e instalação, será necessário instalar dois programas:
 
- •puTTYgen
+ >puTTYgen
 
- •puTTY
+ >puTTY
 
   Antes de usar qualquer um deles, no serviço EC2 no painel da AWS, será necessário acessar o par de chaves e criar um. Para isso basta dar um nome (exemplo:kp1), selecionar a opção RSA (já que é compatível com diversos sistemas operacionais, já o ED25519 é compatível somente com linux e mac), e em seguida escolher o tipo de arquivo .ppk (que será utilizado no puTTY).
 
@@ -66,7 +66,7 @@ O propósito do projeto foi criar uma vm básica (qualificada para o nível grat
  Após o wordpress instalado na VM, só foi preciso conectar o banco de dados:
 
  >no terminal da máquina
- 
+
      Mysql -h endpoint do banco -u usuário do database (ex: admin) -p
  
  Uma vez conectado o processo se torna mais simples, o comando SHOW DATABASES permite mostrar quais bancos ja estão conectados, mas caso necessite criar um novo utilizamos a linha:
@@ -79,4 +79,4 @@ O propósito do projeto foi criar uma vm básica (qualificada para o nível grat
             
      GRANT ALL PRIVILEGES ON [DATABASE name].* TO ‘new_user_name’@’localhost’;
 
-Depois de todo o processo, basta colocar o DNS público da VM na barra de pesquisa do navegador e configurar o wordpress.
+Depois de todo o processo, basta colocar o DNS público da VM na barra de pesquisa do navegador e configurar o wordpress (login,senha, nome do site e etc).
