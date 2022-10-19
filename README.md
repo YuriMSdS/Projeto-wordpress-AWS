@@ -63,20 +63,29 @@ O propósito do projeto foi criar uma vm básica (qualificada para o nível grat
 
      systemctl restart apache2 -> restarta o apache2
  
- Após o wordpress instalado na VM, só foi preciso conectar o banco de dados:
+ Após o wordpress instalado na VM, será preciso conectar o banco de dados:
 
  >no terminal da máquina
 
      Mysql -h endpoint do banco -u usuário do database (ex: admin) -p
  
- Uma vez conectado o processo se torna mais simples, o comando SHOW DATABASES permite mostrar quais bancos ja estão conectados, mas caso necessite criar um novo utilizamos a linha:
+ Uma vez conectado o processo se torna mais simples, o comando SHOW DATABASES permite mostrar quais bancos ja estão conectados, mas caso necessite criar um novo utiliza-se a linha:
 
      CREATE DATABASE nome do banco; (ex: CREATE DATABASE worpress;)
  
- Um possível erro é a falta de permissão do usuário, e para resolvê-lo criei um novo usuário e dei todas as permissões para ele (levando em consideração que não tinha outros usuários envolvidos)
+ Um possível erro é a falta de permissão do usuário, e para resolvê-lo basta criar um novo usuário e conceder todas as permissões para ele (levando em consideração que não tinha outros usuários envolvidos)
 
      CREATE USER ‘username’@‘localhost’ IDENTIFIED BY ‘password’;
             
      GRANT ALL PRIVILEGES ON [DATABASE name].* TO ‘new_user_name’@’localhost’;
 
 Depois de todo o processo, basta colocar o DNS público da VM na barra de pesquisa do navegador e configurar o wordpress (login,senha, nome do site e etc).
+
+
+
+[Legenda]
+>Mysql: utilizado para conectar e modificar o banco de dados na máquina
+>CREATE DATABASE: cria um novo banco de dados (útil pois será mais fácil de manipular permissões e etc);
+>SHOW DATABASES: mostra todos os bancos presentes na máquina;
+>CREATE USER: cria um novo usuário (assim como o banco, é mais simples de gerenciar permissões e mais simples de personalizar);
+>GRANT ALL PRIVILEGES ON: serve para dar todas as permissões para um determinado usuário em um determinado banco.
