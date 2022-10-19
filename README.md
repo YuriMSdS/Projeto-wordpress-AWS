@@ -29,7 +29,7 @@ O propósito do projeto foi criar uma vm básica (qualificada para o nível grat
 
  Assim a VM estará conectada e pronta para instalar o wordpress, segue o script (explicado):
 
-    >#! /bin/bash
+     #! /bin/bash
 
      apt update -> atualiza os programas
 
@@ -68,12 +68,12 @@ Mysql -h endpoint do banco -u usuário do database (ex: admin) -p
  
  Uma vez conectado o processo se torna mais simples, o comando SHOW DATABASES permite mostrar quais bancos ja estão conectados, mas caso necessite criar um novo utilizamos a linha:
 
-CREATE DATABASE nome do banco; (ex: CREATE DATABASE worpress;)
+     CREATE DATABASE nome do banco; (ex: CREATE DATABASE worpress;)
  
  Um possível erro é a falta de permissão do usuário, e para resolvê-lo criei um novo usuário e dei todas as permissões para ele (levando em consideração que não tinha outros usuários envolvidos)
 
-CREATE USER ‘username’@‘localhost’ IDENTIFIED BY ‘password’;
-
-GRANT ALL PRIVILEGES ON [DATABASE name].* TO ‘new_user_name’@’localhost’;
+     CREATE USER ‘username’@‘localhost’ IDENTIFIED BY ‘password’;
+            
+     GRANT ALL PRIVILEGES ON [DATABASE name].* TO ‘new_user_name’@’localhost’;
 
 Depois de todo o processo, basta colocar o DNS público da VM na barra de pesquisa do navegador e configurar o wordpress.
