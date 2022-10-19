@@ -1,9 +1,9 @@
 # Projeto-wordpress-AWS
-O propósito do projeto é ensinar passo-a-passo de como criar uma Instância EC2 básica, contendo um banco de dados mySQL e como subir um wordpress na mesma.
+O propósito do projeto é ensinar passo-a-passo de como criar uma Instância EC2 básica (baixo custo porém funcional), contendo um banco de dados mySQL e como subir um wordpress na mesma.
   
   A VM (EC2) será criada no tipo t2.micro (é uma instância de baixo custo e bom desempenho) na plataforma Ubuntu (é base de linux, fácil de trabalhar), utilizando a zona de disponibilidade us-east-1c (boa conexão e compatível com o tipo da instância) tendo 8 GiB de tamanho do tipo gb2 (o projeto é leve, então o mínimo é o suficiente).
  
- O banco de dados mysql foi criado na versão 8.0.28 (porém tem a 8.0.30 como mais recente),classe db.t3.micro (banco de dados de acesso remoto), tendo 1 GB de RAM, um SSD de uso geral de 20 GiB tendo como máximo 1000 GiB (armazenamento mínimo do SSD)
+ O banco de dados mysql poderá ser criado na versão 8.0.30 (é recomendado sempre utilizar a versão mais recente),classe db.t3.micro (banco de dados de acesso remoto), tendo 1 GB de RAM, um SSD de uso geral de 20 GiB tendo como máximo 1000 GiB (armazenamento mínimo do SSD)
  
  Antes de proseguir para o CMD e instalação, será necessário instalar dois programas:
 
