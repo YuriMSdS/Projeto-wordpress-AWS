@@ -15,9 +15,13 @@ O propósito do projeto foi criar uma vm básica (qualificada para o nível grat
 
   Após a criação do arquivo .ppk ele será utilizado no puTTY da seguinte forma:
   >Na parte de Session pedirá o IP da instância (para checar basta clickar na máquina no painel da AWS,)
+
    >SSH
+
     >Auth
+
      >Após acessar a opção Auth, terá um campo pedindo "Private Key for authentication", basta clickar em browse e utilizar o arquivo .ppk anteriormente criado.
+     
 
  Uma vez feito isso, estará conectado no terminal da máquina, para conectar ele irá pedir o usuário, que no caso será "ubuntu"
 
