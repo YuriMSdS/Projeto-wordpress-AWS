@@ -6,7 +6,9 @@ O propósito do projeto foi criar uma vm básica (qualificada para o nível grat
  O banco de dados mysql foi criado na versão 8.0.28 (porém tem a 8.0.30 como mais recente),classe db.t3.micro (banco de dados de acesso remoto), tendo 1 GB de RAM, um SSD de uso geral de 20 GiB tendo como máximo 1000 GiB (armazenamento mínimo do SSD)
  
  Antes de proseguir para o CMD e instalação, será necessário instalar dois programas:
+
  •puTTYgen
+
  •puTTY
 
   Antes de usar qualquer um deles, no serviço EC2 no painel da AWS, será necessário acessar o par de chaves e criar um. Para isso basta dar um nome (exemplo:kp1), selecionar a opção RSA (já que é compatível com diversos sistemas operacionais, já o ED25519 é compatível somente com linux e mac), e em seguida escolher o tipo de arquivo .ppk (que será utilizado no puTTY).
@@ -18,7 +20,7 @@ O propósito do projeto foi criar uma vm básica (qualificada para o nível grat
 
      >SSH
 
-    >Auth
+     >Auth
 
      >Após acessar a opção Auth, terá um campo pedindo "Private Key for authentication", basta clickar em browse e utilizar o arquivo .ppk anteriormente criado.
 
@@ -27,7 +29,7 @@ O propósito do projeto foi criar uma vm básica (qualificada para o nível grat
 
  Assim a VM estará conectada e pronta para instalar o wordpress, segue o script (explicado):
 
- >#! /bin/bash
+    >#! /bin/bash
 
      apt update -> atualiza os programas
 
