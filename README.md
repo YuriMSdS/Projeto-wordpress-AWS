@@ -14,9 +14,9 @@ O propósito do projeto foi criar uma vm básica (qualificada para o nível grat
   Vale ressaltar que o puTTYgen só será necessário caso não gere o arquivo .ppk direto, neste caso será necessário pegar o IP privado da chave SSH e converter no arquivo no programa.
 
   Após a criação do arquivo .ppk ele será utilizado no puTTY da seguinte forma:
-  >Na parte de Session pedirá o IP da instância (para checar basta clickar na máquina no painel da AWS,)
+     >Na parte de Session pedirá o IP da instância (para checar basta clickar na máquina no painel da AWS,)
 
-   >SSH
+     >SSH
 
     >Auth
 
