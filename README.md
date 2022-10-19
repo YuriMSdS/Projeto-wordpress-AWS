@@ -64,8 +64,9 @@ O propósito do projeto foi criar uma vm básica (qualificada para o nível grat
      systemctl restart apache2 -> restarta o apache2
  
  Após o wordpress instalado na VM, só foi preciso conectar o banco de dados:
- 
+
  >no terminal da máquina
+ 
      Mysql -h endpoint do banco -u usuário do database (ex: admin) -p
  
  Uma vez conectado o processo se torna mais simples, o comando SHOW DATABASES permite mostrar quais bancos ja estão conectados, mas caso necessite criar um novo utilizamos a linha:
