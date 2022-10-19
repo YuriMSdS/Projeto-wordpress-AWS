@@ -84,8 +84,12 @@ Depois de todo o processo, basta colocar o DNS público da VM na barra de pesqui
 
 
 [Legenda]
->Mysql: utilizado para conectar e modificar o banco de dados na máquina
+>Mysql: utilizado para conectar e modificar o banco de dados na máquina;
+
 >CREATE DATABASE: cria um novo banco de dados (útil pois será mais fácil de manipular permissões e etc);
+
 >SHOW DATABASES: mostra todos os bancos presentes na máquina;
+
 >CREATE USER: cria um novo usuário (assim como o banco, é mais simples de gerenciar permissões e mais simples de personalizar);
+
 >GRANT ALL PRIVILEGES ON: serve para dar todas as permissões para um determinado usuário em um determinado banco.
