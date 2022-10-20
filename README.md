@@ -7,9 +7,8 @@ O propósito do projeto é ensinar passo-a-passo de como criar uma Instância EC
  
  Antes de proseguir para o CMD e instalação, será necessário instalar dois programas:
 
- >puTTYgen
- 
-  link para download: https://www.puttygen.com
+ >puTTYgen 
+ link para download: https://www.puttygen.com
 
  >puTTY   
   link para download: https://www.putty.org
