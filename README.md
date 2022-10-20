@@ -71,9 +71,9 @@ O propósito do projeto é ensinar passo-a-passo de como criar uma Instância EC
 
      Mysql -h endpoint_do_banco -u usuário_do_database (ex: admin) -p
  
- Uma vez conectado o processo se torna mais simples, o comando SHOW DATABASES permite mostrar quais bancos ja estão conectados, mas caso necessite criar um novo utiliza-se a linha:
+ Uma vez conectado o processo se torna mais simples, o comando SHOW DATABASES permite mostrar quais bancos ja estão conectados, mas caso precise criar um novo utiliza-se a linha:
 
-     CREATE DATABASE nome do banco; (ex: CREATE DATABASE worpress;)
+     CREATE DATABASE nome_do_banco; (ex: CREATE DATABASE worpress;)
  
  Um possível erro é a falta de permissão do usuário, e para resolvê-lo basta criar um novo usuário e conceder todas as permissões para ele (levando em consideração que não tinha outros usuários envolvidos)
 
