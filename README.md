@@ -11,6 +11,8 @@ O propósito do projeto é ensinar passo-a-passo de como criar uma Instância EC
 
  >puTTY
 
+ >download: https://www.puttygen.com/download-putty (o puTTYgen não precisa ser baixado separado, basta instalar o puTTY na sua versão mais recente que a função gen estará inclusa)
+
   Antes de usar qualquer um deles, no serviço EC2 no painel da AWS, será necessário acessar o par de chaves e criar um. Para isso basta dar um nome (exemplo:kp1), selecionar a opção RSA (já que é compatível com diversos sistemas operacionais, já o ED25519 é compatível somente com linux e mac), e em seguida escolher o tipo de arquivo .ppk (que será utilizado no puTTY).
 
   Vale ressaltar que o puTTYgen só será necessário caso não gere o arquivo .ppk direto, neste caso será necessário pegar o IP privado da chave SSH e converter no arquivo no programa.
@@ -67,7 +69,7 @@ O propósito do projeto é ensinar passo-a-passo de como criar uma Instância EC
 
  >no terminal da máquina
 
-     Mysql -h endpoint do banco -u usuário do database (ex: admin) -p
+     Mysql -h endpoint_do_banco -u usuário_do_database (ex: admin) -p
  
  Uma vez conectado o processo se torna mais simples, o comando SHOW DATABASES permite mostrar quais bancos ja estão conectados, mas caso necessite criar um novo utiliza-se a linha:
 
