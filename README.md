@@ -7,9 +7,11 @@ O propósito do projeto é ensinar passo-a-passo de como criar uma Instância EC
  
  Antes de proseguir para o CMD e instalação, será necessário instalar dois programas:
 
- >puTTYgen link para download: https://www.puttygen.com
+ >puTTYgen
+  link para download: https://www.puttygen.com
 
- >puTTY   link para download: https://www.putty.org
+ >puTTY   
+  link para download: https://www.putty.org
 
   Antes de usar qualquer um deles, no serviço EC2 no painel da AWS, será necessário acessar o par de chaves e criar um. Para isso basta dar um nome (exemplo:kp1), selecionar a opção RSA (já que é compatível com diversos sistemas operacionais, já o ED25519 é compatível somente com linux e mac), e em seguida escolher o tipo de arquivo .ppk (que será utilizado no puTTY).
 
